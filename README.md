@@ -1,6 +1,6 @@
 # padel_availability
 
-## How to install
+## How to install if you use python3.11 or higher
 - install virtualenv `pip3 install virtualenv --break-system-packages`
 - create envrionment `python3 -m venv env`
 - activate envrionment `source env/bin/activate`
