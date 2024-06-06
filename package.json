@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "serverless deploy",
-    "dev": "flask --app api/index.py --debug run"
+    "dev": "flask --app flask_app.py --debug run"
   },
   "author": "",
   "license": "ISC",
