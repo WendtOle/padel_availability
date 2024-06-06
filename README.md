@@ -19,3 +19,8 @@
 - run `npm install` to install serverless dependency
 - run `npm run deploy` to deploy
 - you probably have to authenticate via serverless and aws
+
+## Start local development server
+
+- run `npm run dev`
+- access via "http://127.0.0.1:5000"

@@ -1,0 +1,38 @@
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='styles.css') }}"
+  type="text/css"
+/>
+
+<div class="content">
+  <h1>Padel Availability</h1>
+  {% for date in dates %}
+  <h2>{{ date }}</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        {% for col in colnames %}
+        <th>{{ col }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in data[loop.index - 1] %}
+      <tr>
+        {% for item in record %}
+        <td>{{ item }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+  <a class="navigation" href="/?offset={{offset}}&size={{size}}">See more</a>
+  <div class="footer">
+    <span
+      >Brought to you by
+      <a target="_blank" href="https://github.com/ini272">Johannes</a> and
+      <a target="_blank" href="http://ole-wendt.de">Ole</a></span
+    >
+  </div>
+</div>
