@@ -69,7 +69,7 @@ def getAvailability(current_date):
                         # Check if start time is after 6:00 PM and duration is not 60 minutes
                         if (datetime.strptime(local_start_time, "%Y-%m-%d %H:%M:%S").time() >= datetime.strptime("18:00:00", "%H:%M:%S").time() and
                             slot['duration'] != 60):
-                            suitable_slots.append((local_start_time, slot['duration'], slot['price']))
+                            suitable_slots.append((slot['start_time'], slot['duration'], slot['price']))
                     if suitable_slots:
                         for slot in suitable_slots:
                             results.append([venue['name'], court_name, slot[0], slot[1], slot[2]])
